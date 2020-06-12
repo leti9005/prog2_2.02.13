@@ -126,9 +126,13 @@ int main () {
 
 	ofstream outputFile(output);
 
-	for (int i = 0; i < list.getSize(); i++) {
-		int a = list.getValue(i);
-		outputFile << a << endl;
+	if (outputFile.is_open()) {
+		for (int i = 0; i < list.getSize(); i++) {
+			int a = list.getValue(i);
+			outputFile << a << endl;
+		}
+
+		outputFile.close();
 	}
 
 	return 0;
