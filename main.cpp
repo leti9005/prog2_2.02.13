@@ -17,7 +17,7 @@ class List {
 	public:
 		List() {};
 
-		void push(char data[0x255]) {
+		void push(const char data[0x255]) {
 			int number = this->charToInt(data);
 
 			if (this->head == nullptr) {
